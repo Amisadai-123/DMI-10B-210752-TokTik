@@ -1,9 +1,12 @@
+
 import 'package:flutter/material.dart';
 import 'package:toktik_210752/domains/entities/video_post.dart';
 import 'package:toktik_210752/infrastructure/models/local_video_model.dart';
 import 'package:toktik_210752/shared/data/local_videos.dart';
 
 class DiscoverProvider extends ChangeNotifier {
+  // TODO: Repository, DataSource
+
   bool initialLoading = true;
   List<VideoPost> videos = [];
 
@@ -13,12 +16,10 @@ class DiscoverProvider extends ChangeNotifier {
         .map((video) => LocalVideoModel.fromJson(video).toVideoPostEntity())
         .toList();
 
-    
-
     videos.addAll(newVideos);
     initialLoading = false;
 
-   
+    //todo: cargar videos as
     notifyListeners();
   }
 }
