@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:toktik_210752/domains/entities/video_post.dart';
-import 'package:toktik_210752/infrastructure/models/local_video_model.dart';
+import 'package:toktik_210752/infrestructure/models/local_video_model.dart';
 import 'package:toktik_210752/shared/data/local_videos.dart';
 
 class DiscoverProvider extends ChangeNotifier {
@@ -19,7 +18,9 @@ class DiscoverProvider extends ChangeNotifier {
     videos.addAll(newVideos);
     initialLoading = false;
 
-    //todo: cargar videos as
+    //todo: cargar videos
     notifyListeners();
   }
 }
+
+

@@ -12,12 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => DiscoverProvider())],
+      providers:  [ChangeNotifierProvider(
+        lazy: false,
+        create: (_)=> DiscoverProvider()..loadNextPage())],
       child: MaterialApp(
-          title: 'TokTik 210752',
-          debugShowCheckedModeBanner: false,
-          theme: AppTheme().getTheme(),
-          home: const DiscoverScreen()),
+        title: 'TokTik 210519',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme().getTheme(),
+        home: const DiscoverScreen()
+    )
     );
   }
 }

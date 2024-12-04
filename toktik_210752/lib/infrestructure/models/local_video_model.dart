@@ -1,6 +1,5 @@
 
 import 'package:toktik_210752/domains/entities/video_post.dart';
-
 class LocalVideoModel {
   final String name;
   final String videoUrl;
